@@ -1,11 +1,11 @@
 {
-  "name": "cropperjs",
+  "name": "@ardimedia/cropperjs",
   "description": "JavaScript image cropper.",
-  "version": "0.8.1",
+  "version": "0.8.3",
   "main": "dist/cropper.js",
   "license": "MIT",
-  "repository": "fengyuanchen/cropperjs",
-  "homepage": "https://fengyuanchen.github.io/cropperjs",
+  "repository": "am-hs/cropperjs",
+  "homepage": "https://github.com/am-hs/cropperjs",
   "author": {
     "name": "Fengyuan Chen",
     "url": "http://chenfengyuan.com"

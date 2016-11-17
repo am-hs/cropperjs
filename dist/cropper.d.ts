@@ -3,7 +3,7 @@
 // Definitions by: Stepan Mikhaylyuk <https://github.com/stepancar>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'cropperjs' {
+declare module '@ardimedia/cropperjs' {
     export class Cropper {
         constructor(element: HTMLImageElement, options: CropperOptions);
         /**
