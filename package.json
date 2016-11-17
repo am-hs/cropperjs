@@ -53,5 +53,6 @@
     "tether": "^1.3.7",
     "webpack": "^1.13.2",
     "webpack-stream": "^3.2.0"
-  }
+  },
+  "types": "./dist/cropper.d.ts"
 }

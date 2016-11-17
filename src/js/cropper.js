@@ -26,7 +26,7 @@ const REGEXP_DATA_URL_JPEG = /^data:image\/jpeg.*;base64,/;
 
 let AnotherCropper;
 
-class Cropper {
+export class Cropper {
   constructor(element, options) {
     const self = this;
 
@@ -439,5 +439,3 @@ if (typeof window !== 'undefined') {
   AnotherCropper = window.Cropper;
   window.Cropper = Cropper;
 }
-
-export default Cropper;

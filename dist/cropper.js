@@ -1,13 +1,3 @@
-/*!
- * Cropper.js v0.8.1
- * https://github.com/fengyuanchen/cropperjs
- *
- * Copyright (c) 2015-2016 Fengyuan Chen
- * Released under the MIT license
- *
- * Date: 2016-09-03T04:55:16.458Z
- */
-
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -69,6 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Cropper = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -132,7 +123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var AnotherCropper = void 0;
 	
-	var Cropper = function () {
+	var Cropper = exports.Cropper = function () {
 	  function Cropper(element, options) {
 	    _classCallCheck(this, Cropper);
 	
@@ -442,9 +433,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      options.aspectRatio = Math.max(0, options.aspectRatio) || NaN;
 	      options.viewMode = Math.max(0, Math.min(3, Math.round(options.viewMode))) || 0;
 	
-	      if (options.autoCrop) {
-	        self.cropped = true;
+	      self.cropped = options.autoCrop;
 	
+	      if (options.autoCrop) {
 	        if (options.modal) {
 	          $.addClass(dragBox, 'cropper-modal');
 	        }
@@ -561,8 +552,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  AnotherCropper = window.Cropper;
 	  window.Cropper = Cropper;
 	}
-	
-	exports.default = Cropper;
 
 /***/ },
 /* 1 */
@@ -1168,7 +1157,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
 	exports.typeOf = typeOf;
 	exports.isNumber = isNumber;
